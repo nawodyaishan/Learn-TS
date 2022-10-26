@@ -9,4 +9,4 @@ myType1 = {id: 3, name: "Mike", gender: false};//can add a property
 myType1 = {name: "Mike", gender: false};//can even reduce the properties because of initial any explict casting
 
 let a = 2;
-let b = a as string;//Error
+// let b = a as string;//Error
