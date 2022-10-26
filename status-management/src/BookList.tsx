@@ -9,17 +9,17 @@ export const BookList = () => {
     const [isError, setIsError] = useState(false);
     const [books, setBooks] = useState<Book[]>([]);
 
-    const loadBooks = async () => {
-        setIsLoading(true);
-        setIsSuccess(false);
-        setIsError(false);
-        try {
-            const booksResponse = await getBooks();
-            setBooks(booksResponse.results);
-            setIsSuccess(true);
-        } catch {
-            setIsError(true);
-        } finally {
+     const loadBooks = async () => {
+         setIsLoading(true);
+         setIsSuccess(false);
+         setIsError(false);
+         try {
+             const booksResponse = await getBooks();
+             setBooks(booksResponse.results);
+             setIsSuccess(true);
+         } catch {
+             setIsError(true);
+         } finally {
             setIsLoading(false);
         }
     };
